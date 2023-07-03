@@ -1,15 +1,28 @@
+body{
+    background-color:bisque;
+}
+
 .winner-text{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
+    
     font-size: 25px;
 }
 
+.count-player{
+    background-color: beige;
+    display: flex;
+  flex-direction: column-reverse;
+}
+
 .container{
+    
     margin: 10px 50px 50px 50px;
 }
 
 .content{
+    background-color: beige;
     width: 156px;
    height: 156px;
    display: flex;
@@ -34,3 +47,7 @@
 .item:hover{
     background-color: #f1f1f10c;
 }
+
+
+
+
