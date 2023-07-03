@@ -1,0 +1,36 @@
+.winner-text{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+}
+
+.container{
+    margin: 10px 50px 50px 50px;
+}
+
+.content{
+    width: 156px;
+   height: 156px;
+   display: flex;
+   flex-wrap: wrap;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.item{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    display: inline-block;
+    font-size: 25px;
+    border: 1px solid black;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: background .1s;
+}
+
+.item:hover{
+    background-color: #f1f1f10c;
+}
