@@ -44,9 +44,11 @@ function onClick(evt) {
     if (player === 'X') {
         historyX.push(id);
         result = isWinner(historyX);
+        target.style.backgroundColor = 'burlywood';
     } else {
         historyO.push(id);
         result = isWinner(historyO);
+        target.style.backgroundColor = 'darkturquoise';
     }
 
     target.textContent = player;
