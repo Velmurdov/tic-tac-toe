@@ -15,7 +15,7 @@ let player = 'X' ;
 
 let historyX = [];
 let historyO = [];
-const isEndGame = historyO.length + historyX.length === 9;
+
 
 function createMarkup(){
     let markup ='';
@@ -34,7 +34,7 @@ function onClick(evt){
     if (!target.classList.contains('js-item') || target.textContent){
         return;
     }
-
+    
     let result = false;
     const id = Number(target.dataset.id);
     if (player === 'X') {
@@ -52,7 +52,7 @@ function onClick(evt){
         console.log(`Winner ${player}🙃`)
         resetGame();
         return;
-    }else if (isEndGame) {
+    }else if (historyO.length + historyX.length === 9) {
         winText.textContent = (`Try again 😱`)
         console.log(`Try again`)
         resetGame();
@@ -67,7 +67,7 @@ function isWinner(arr){
     return wins.some(item => item.every(id => arr.includes(id)));
 }
 
-function resetGame(){
+function resetGame(evt){
     createMarkup();
    historyX = [];
    historyO = [];
