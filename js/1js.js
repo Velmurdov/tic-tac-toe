@@ -15,6 +15,7 @@ let player = 'X' ;
 
 let historyX = [];
 let historyO = [];
+const isEndGame = historyO.length + historyX.length === 9;
 
 function createMarkup(){
     let markup ='';
@@ -49,6 +50,11 @@ function onClick(evt){
     if (result) {
         winText.textContent = (`Winner is ${player} 🙃`)
         console.log(`Winner ${player}🙃`)
+        resetGame();
+        return;
+    }else if (isEndGame) {
+        winText.textContent = (`Try again 😱`)
+        console.log(`Try again`)
         resetGame();
         return;
     }
